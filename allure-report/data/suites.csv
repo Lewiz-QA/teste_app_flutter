@@ -1,5 +1,5 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Nov 07 23:29:41 BRT 2022","Mon Nov 07 23:30:28 BRT 2022","46499","","Acessar o Painel de Administrador","","Acessar o Painel de Administrador","Deve realizar login com credenciais válidas","Deve realizar login com credenciais válidas",""
+"passed","Thu Nov 10 00:00:32 BRT 2022","Thu Nov 10 00:01:38 BRT 2022","65790","","Acessar o Painel de Administrador","","Acessar o Painel de Administrador","Deve realizar login com credenciais válidas","Deve realizar login com credenciais válidas",""
 "passed","Sun Aug 21 21:31:38 BRT 2022","Sun Aug 21 21:32:18 BRT 2022","40653","","Access Admin Panel","","Access Admin Panel","should login with valid credentials","should login with valid credentials",""
 "broken","Sat Oct 29 22:25:12 BRT 2022","Sat Oct 29 22:25:12 BRT 2022","589","","Access Admin Panel","","Access Admin Panel","should login with valid credentials","should login with valid credentials",""
 "broken","Mon Oct 31 23:33:52 BRT 2022","Mon Oct 31 23:33:55 BRT 2022","2524","","Acessar o Painel de Administrador","","Acessar o Painel de Administrador","Deve cadastrar um produto com sucesso","Deve cadastrar um produto com sucesso",""

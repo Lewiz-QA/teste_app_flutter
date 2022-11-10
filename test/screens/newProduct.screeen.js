@@ -19,8 +19,6 @@ class newProductScreen {
 
     get #chooseImage(){
         return $('(//android.widget.ImageView[@content-desc="Product image"])[1]')
-        //resource-id: com.woocommerce.android:id/imageView
-        //index: 0
     }
 
     async selectImage(){
@@ -84,13 +82,93 @@ class newProductScreen {
     get #salePrice(){
         return $('//android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.EditText')
     }
+    
 
     async fillPrice(){
         await this.#addPrice.click()
         await this.#regularPrice.waitForExist({ timeout: 5000 })
         await this.#regularPrice.setValue('100')
         await this.#salePrice.setValue('80.50')
-    }      
+    }
+    
+    get #inventory(){
+        return $('android= new UiSelector().text("Inventory")')
+    }
+
+    async addInventory(){
+        await this.#inventory.waitForExist({ timeout: 5000 })
+        return await this.#inventory.click()
+    }
+
+    get #sku(){
+        return $('id:edit_text')
+    }
+
+    get #switchStock(){
+        return $('id:manageStock_switch')
+    }
+
+    get #quantity(){
+        return $('//android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.EditText')
+    }
+
+    async fillInventory(){
+        await this.#sku.waitForExist({ timeout: 5000 })
+        await this.#sku.setValue('P12345678901')
+        await this.#switchStock.click()
+        await this.#quantity.setValue('1000')
+    }
+
+    get #moreDetails(){
+        return $('id:productDetail_addMoreButton')
+    }
+
+    async addMoreDetails(){
+        await this.#moreDetails.waitForExist({ timeout: 5000 })
+        return await this.#moreDetails.click()
+    }
+
+    get #shipping(){
+        return $('android= new UiSelector().text("Shipping")')
+    }
+
+    async addShipping(){
+        await this.#shipping.waitForExist({ timeout: 5000 })
+        return await this.#shipping.click()
+    }
+
+    get #weight(){
+        return $('//android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.EditText')
+    }
+
+    get #length(){
+        return $('//android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.EditText')
+    }
+
+    get #width(){
+        return $('//android.widget.LinearLayout[3]/android.widget.FrameLayout/android.widget.EditText')
+    }
+
+    get #height(){
+        return $('//android.widget.LinearLayout[4]/android.widget.FrameLayout/android.widget.EditText')
+    }
+
+    async fillShipping(){
+        await this.#weight.waitForExist({ timeout: 5000 })
+        await this.#weight.setValue('10')
+        await this.#length.setValue('15')
+        await this.#width.setValue('20')
+        await this.#height.setValue('25')
+    }
+
+    get #publishButton(){
+        return $('id:menu_done')
+    }
+
+    async publishProduct(){
+        await this.#publishButton.waitForExist({ timeout: 5000 })
+        return await this.#publishButton.click()
+    }
 }
 
 module.exports = new newProductScreen()

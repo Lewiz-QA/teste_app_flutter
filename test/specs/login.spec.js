@@ -37,5 +37,14 @@ describe('Acessar o Painel de Administrador', () => {
         await newProductScreeen.getBackToNewProduct();
         await newProductScreeen.fillPrice();
         await newProductScreeen.getBackToNewProduct();
+        await newProductScreeen.addInventory();
+        await newProductScreeen.fillInventory();
+        await newProductScreeen.getBackToNewProduct();
+        await newProductScreeen.addMoreDetails();
+        await newProductScreeen.addShipping();
+        await newProductScreeen.fillShipping();
+        await newProductScreeen.getBackToNewProduct();
+        await newProductScreeen.publishProduct();
+
     });
 })
