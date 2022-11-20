@@ -18,7 +18,7 @@ pipeline {
         }
      stage('Executar os testes') {
             steps {
-               bat 'npx test'
+               bat 'npm t'
             }
         }
     }
