@@ -10,8 +10,8 @@ let usuario = 'gerente'
 let senha = 'GD*peToHNJ1#c$sgk08EaYJQ'
 let urlLoja = 'http://lojaebac.ebaconline.art.br/'
 
-describe('Acessar o Painel de Administrador', () => {
-    it('Deve realizar login com credenciais válidas', async () => {
+describe('Acessar o Painel de Administrador e cadastrar Produto', () => {
+    it('Deve realizar Login e cadastrar Produto', async () => {
         await homeScreen.goToLogin()
         await loginScreen.setStoreAddress(urlLoja)
         await loginScreen.continue()
@@ -23,28 +23,19 @@ describe('Acessar o Painel de Administrador', () => {
         expect(await myStoreScreen.myStoreLogoIsDisplayed()).toBeTruthy()
         expect(await myStoreScreen.getStoreName()).toEqual('EBAC - Shop')
 
-        await myStoreScreen.goToProducts();
-        await productsScreen.goToNewProduct();
-        await productsScreen.selectTypeOfNewProduct();
-        await newProductScreen.addImage();
-        await newProductScreen.selectTypeOfUpload();
-        await newProductScreen.selectImage();
-        await newProductScreen.uploadImage();
-        await newProductScreen.getBackToNewProduct();
-        await newProductScreeen.enterProductTitle();
-        await newProductScreeen.openDescriptionScreen();
-        await newProductScreeen.describeYourProduct();
-        await newProductScreeen.getBackToNewProduct();
-        await newProductScreeen.fillPrice();
-        await newProductScreeen.getBackToNewProduct();
-        await newProductScreeen.addInventory();
-        await newProductScreeen.fillInventory();
-        await newProductScreeen.getBackToNewProduct();
-        await newProductScreeen.addMoreDetails();
-        await newProductScreeen.addShipping();
-        await newProductScreeen.fillShipping();
-        await newProductScreeen.getBackToNewProduct();
-        await newProductScreeen.publishProduct();
+        await myStoreScreen.goToProducts()
+        await productsScreen.selectTypeOfNewProduct()
+        await newProductScreen.addImage()
+        await newProductScreeen.enterProductTitle()
+        await newProductScreeen.describeYourProduct()
+        await newProductScreeen.fillPrice()
+        await newProductScreeen.fillInventory()
+        await newProductScreeen.addMoreDetails()
+        await newProductScreeen.fillShipping()
+        await newProductScreeen.publishProduct()
+        await newProductScreeen.seeMoreOptions()
+
+        expect(await newProductScreeen.getViewOnStoreOption()).toEqual('View product on store')
 
     });
 })

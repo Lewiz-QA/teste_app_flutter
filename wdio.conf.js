@@ -3,37 +3,35 @@ const allure = require('allure-commandline')
 const video = require('wdio-video-reporter')
 
 exports.config = {
-    hostname: 'localhost', //Comentários para rodar no Emulador. Atualmente está para rodar no BrowserStack
-    port: 4725,
-    path: '/wd/hub',
-    //user: "luizmenon_46bPFI", //BrowserStack
-    //key: "8NgvkQKxhnRpWEaHrxyo",
+    //hostname: 'localhost', //Comentários para rodar no Emulador. Atualmente está para rodar no BrowserStack
+    //port: 4725,
+    //path: '/wd/hub',
+    user: "luizmenon_46bPFI", //BrowserStack
+    key: "8NgvkQKxhnRpWEaHrxyo",
 
-    services: ['appium'],
-    //services: ['browserstack'],
+    //services: ['appium'],
+    services: ['browserstack'],
     specs: [
         './test/specs/*.spec.js'
     ],
     framework: 'mocha',
     
     capabilities: [{
-        "platformName": "Android",
-        "platformVersion": "9.0",
-        "deviceName": "ebac-qe",
-        "automationName": "UiAutomator2",
-        "app": join(process.cwd(), './app/android/loja-ebac.apk'),
-        "appActivity": ".ui.main.MainActivity",
-        "appWaitActivity": ".ui.login.LoginActivity",
-        //"appWaitActivity": "com.woocommerce.android/.ui.login.LoginActivity",
-        'newCommandTimeout': 240
+        //"platformName": "Android",   //AVD
+        //"platformVersion": "9.0",
+        //"deviceName": "ebac-qe",
+        //"automationName": "UiAutomator2",
+        //"app": join(process.cwd(), './app/android/loja-ebac.apk'),
+        //"appActivity": ".ui.main.MainActivity",
+        //"appWaitActivity": ".ui.login.LoginActivity",
+        //'newCommandTimeout': 240
    
-
-        //'app' : 'bs://767ae1765354fafd90cb0a56fd1d6e9733b47150', //BrowserStack
-        //'device' : 'Samsung Galaxy S22 Plus',
-        //'os_version' : '12.0',
-        //'project' : 'Meu primeiro projeto em Device Farm',
-        //'build' : '1',
-        //'name': 'teste_login'
+        'app' : 'bs://33cdc30b057bed25384c3968a168e624c74b6692', //BrowserStack
+        'device' : 'Samsung Galaxy S22 Plus',
+        'os_version' : '12.0',
+        'project' : 'Teste Login e Cadastro de Produto em DeviceFarm',
+        'build' : '1',
+        'name': 'teste_e2e_cadastro_produto'
       }],
 
       waitForTimeout: 20000,
