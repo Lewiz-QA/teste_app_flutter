@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672799053659' stop='1672799076299'>
+    <name>Realizar Login no App</name>
+    <title>Realizar Login no App</title>
+    <test-cases>
+        <test-case start='1672799053660' status='broken' stop='1672799076292'>
+            <name>Deve realizar Login</name>
+            <title>Deve realizar Login</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='ebac-qe 9.0-9'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='4148449e-fe88-45c1-93a4-0a6f9065347e-attachment.mp4' type='video/mp4' size='167'/>
+            </attachments>
+            <failure>
+                <message>element ("~Lu Bolachas Olá, Fazer Login") still not existing after 20000ms</message>
+                <stack-trace>Error: element ("~Lu Bolachas Olá, Fazer Login") still not existing after 20000ms
+                    at E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\webdriverio\build\commands\browser\waitUntil.js:66:23
+                    at async Element.wrapCommandFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async HomeScreen.goToLogin (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\test\screens\home.screen.js:15:9)
+                    at async Context.&lt;anonymous> (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\test\specs\login.spec.js:11:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

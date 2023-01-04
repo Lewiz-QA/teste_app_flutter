@@ -1,19 +1,21 @@
 const homeScreen = require("../screens/home.screen");
 //const { login } = require("../screens/login.screen");
 const loginScreen = require("../screens/login.screen");
-const myStoreScreen = require("../screens/myStore.screen");
-const productsScreen = require("../screens/products.screen");
-const newProductScreen = require("../screens/newProduct.screeen");
-const newProductScreeen = require("../screens/newProduct.screeen");
 
-let usuario = 'gerente'
-let senha = 'GD*peToHNJ1#c$sgk08EaYJQ'
-let urlLoja = 'http://lojaebac.ebaconline.art.br/'
+let usuario = "lewizmenon@gmail.com"
+let senha = "123456"
 
-describe('Acessar o Painel de Administrador e cadastrar Produto', () => {
-    it('Deve realizar Login e cadastrar Produto', async () => {
+describe('Realizar Login no App', () => {
+    it('Deve realizar Login', async () => {
+        await homeScreen.goToLeftDrawer()
         await homeScreen.goToLogin()
-        await loginScreen.setStoreAddress(urlLoja)
+
+        await loginScreen.login(usuario,senha)
+
+        expect(await homeScreen.getButtonLogout()).contains('Sair')
+
+
+        /*await loginScreen.setStoreAddress(urlLoja)
         await loginScreen.continue()
         await loginScreen.continueWithStoreCredentials()
         await loginScreen.login(usuario,senha)
@@ -35,7 +37,7 @@ describe('Acessar o Painel de Administrador e cadastrar Produto', () => {
         await newProductScreeen.publishProduct()
         await newProductScreeen.seeMoreOptions()
 
-        expect(await newProductScreeen.getViewOnStoreOption()).toEqual('View product on store')
+        expect(await newProductScreeen.getViewOnStoreOption()).toEqual('View product on store')*/
 
     });
 })

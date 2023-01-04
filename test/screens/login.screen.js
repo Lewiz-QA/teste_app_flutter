@@ -1,48 +1,18 @@
 class LoginScreen {
-    get #storeAddress(){ return $('android.widget.EditText') }
 
-    get #continue() { return $('id:bottom_button') }
+    get #email(){ return $('//android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.EditText[1]') }
 
-    get #continueWithStoreCredentials() { return $('id:login_site_creds') }
+    get #password() { return $('android.widget.EditText[3]') }
 
-    get #username() { return $('android=new UiSelector().text("Username")')}
-
-    get #password() { return $('android=new UiSelector().text("Password")')}
-
-    get #twoFactorPasswordBtn() { return $('id:login_enter_password')}
-
-    async setStoreAddress(url){
-        this.#storeAddress.setValue(url)
-    }
-
-    async continue(){
-        await this.#continue.waitForExist({ timeout: 20000 })
-        await this.#continue.click()
-    }
-
-    async continueWithStoreCredentials(){
-        await this.#continueWithStoreCredentials.waitForExist({ timeout: 20000 })
-        await this.#continueWithStoreCredentials.click()
-    }
+    get #entrarButton() { return $('android= new UiSelector().text("Entrar")') }
 
     async login(username, password){
-        await this.#username.waitForExist({ timeout: 20000 })
-        await this.#username.setValue(username)
-        await this.#password.waitForExist({ timeout: 20000 })
+        await this.#email.waitForExist({ timeout: 20000 })
+        await this.#email.setValue(username)
         await this.#password.setValue(password)
-        await this.#continue.click()
+        await this.#entrarButton.click()
     }
 
-    async goToTwoFactorAuth(){
-        await this.#twoFactorPasswordBtn.waitForExist({ timeout: 20000 })
-        await this.#twoFactorPasswordBtn.click()
-    }
-
-    async twoFactorLogin(password){
-        await this.#password.waitForExist({ timeout: 20000 })
-        await this.#password.setValue(password)
-        await this.#continue.click()
-    }
 }
 
 module.exports = new LoginScreen()

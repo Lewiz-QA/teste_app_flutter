@@ -22,8 +22,9 @@ exports.config = {
         "deviceName": "ebac-qe",
         "automationName": "UiAutomator2",
         "app": join(process.cwd(), './app/android/app-release.apk'),
-        "appActivity": ".ui.main.MainActivity",
-        "appWaitActivity": ".ui.login.LoginActivity",
+        "appPackage": "br.com.menon.lu_bolachas",
+        "appActivity": "br.com.menon.lu_bolachas.MainActivity",
+        "appWaitActivity": "br.com.menon.lu_bolachas.MainActivity",
         'newCommandTimeout': 240
    
         //'app' : 'bs://33cdc30b057bed25384c3968a168e624c74b6692', //BrowserStack

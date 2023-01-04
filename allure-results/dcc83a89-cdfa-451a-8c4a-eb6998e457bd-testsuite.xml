@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672799347147' stop='1672799351329'>
+    <name>Realizar Login no App</name>
+    <title>Realizar Login no App</title>
+    <test-cases>
+        <test-case start='1672799347148' status='broken' stop='1672799351324'>
+            <name>Deve realizar Login</name>
+            <title>Deve realizar Login</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='ebac-qe 9.0-9'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='6965c631-4fb2-4baf-8ada-f37311572e10-attachment.mp4' type='video/mp4' size='167'/>
+            </attachments>
+            <failure>
+                <message>Exception while reading JSON</message>
+                <stack-trace>invalid argument: Exception while reading JSON
+                    at getErrorFromResponseBody (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\webdriver\build\utils.js:198:12)
+                    at NodeJSRequest._request (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\webdriver\build\request\index.js:166:60)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async Element.wrapCommandFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.click (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\webdriverio\build\commands\element\click.js:114:9)
+                    at async Element.wrapCommandFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (E:\Particular\Studies\Ebac_Local\LuBolachas\teste_app_flutter\node_modules\webdriverio\build\middlewares.js:24:32)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
