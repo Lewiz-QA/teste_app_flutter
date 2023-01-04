@@ -1,7 +1,7 @@
 {
-    "name": "testes-mobile-ebac-shop",
+    "name": "testes-mobile-flutter-lu-bolachas",
     "version": "1.0.0",
-    "description": "Projeto de Testes EBAC Mobile",
+    "description": "Projeto de Testes em Flutter",
     "main": "index.js",
     "scripts": {
         "test": "npx wdio run ./wdio.conf.js",
